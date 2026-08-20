@@ -1,0 +1,14 @@
+name: Deploy para VPS
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy via webhook
+        run: |
+          curl -s -X POST https://treinamento.ivillar.com.br/deploy.php \
+            -H "X-Deploy-Token: ${{ secrets.DEPLOY_TOKEN }}" \
+            --data-binary @index.html
