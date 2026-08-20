@@ -11,9 +11,9 @@ jobs:
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh
-          printf '%s' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | base64 -d > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H treinamento.ivillar.com.br >> ~/.ssh/known_hosts 2>/dev/null
       - name: Deploy via SCP
         run: |
-          scp -v -i ~/.ssh/id_ed25519 index.html root@treinamento.ivillar.com.br:/var/www/treinamento.ivillar.com.br/index.html
+          scp -i ~/.ssh/id_ed25519 index.html root@treinamento.ivillar.com.br:/var/www/treinamento.ivillar.com.br/index.html
