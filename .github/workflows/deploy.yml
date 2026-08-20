@@ -7,9 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy via webhook
+      - name: Deploy via SCP
         run: |
-          curl -sf -X POST https://treinamento.ivillar.com.br/deploy.php \
-            -H "X-Deploy-Token: ${{ secrets.DEPLOY_TOKEN }}" \
-            -H "Content-Type: application/octet-stream" \
-            --data-binary @index.html
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > /tmp/deploy_key
+          chmod 600 /tmp/deploy_key
+          scp -i /tmp/deploy_key -o StrictHostKeyChecking=no index.html root@treinamento.ivillar.com.br:/var/www/treinamento.ivillar.com.br/index.html
