@@ -153,7 +153,7 @@ header{
     rgba(255,255,255,0.04) 100%
   );
   pointer-events:none;
-  border-radius:.px 2px 0 0;
+  border-radius:2px 2px 0 0;
 }
 
 .fs:hover{ filter:brightness(1.12) saturate(1.1); box-shadow:0 0 18px rgba(100,160,255,0.35); }
@@ -207,90 +207,6 @@ header{
 }
 .section-head h2{
   font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-.02em;
-  margin-bottom:14px;
-}
-.section-head p{color:var(--muted2);font-size:1rem}
-.funil-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-
-.step-card{
-  background:var(--bg-sec2);border:1px solid var(--border2);
-  border-radius:var(--radius);overflow:hidden;
-  transition:border-color .3s ease;
-  scroll-margin-top:84px;
-}
-.step-card:hover{border-color:rgba(59,113,255,0.4)}
-.step-card.highlighted{
-  border-color:var(--gold)!important;
-  box-shadow:0 0 0 2px rgba(212,168,67,0.25),0 8px 40px rgba(212,168,67,0.1);
-}
-.step-head{
-  display:flex;align-items:center;gap:14px;padding:20px 22px;
-  cursor:pointer;user-select:none;
-}
-.step-icon{
-  width:50px;height:50px;border-radius:12px;flex-shrink:0;
-  background:linear-gradient(135deg,rgba(59,113,255,0.2),rgba(212,168,67,0.15));
-  display:flex;align-items:center;justify-content:center;font-size:1.4rem;
-  border:1px solid var(--border2);
-}
-.step-meta{flex:1}
-.step-num{font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.step-title{font-size:1.1rem;font-weight:700;margin-top:2px}
-.step-phrase{font-size:.88rem;color:var(--muted2);font-style:italic;margin-top:3px}
-.step-toggle{
-  width:30px;height:30px;border-radius:50%;background:var(--bg-sec3);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--gold);font-size:1.2rem;transition:transform .3s;flex-shrink:0;
-}
-.step-card.open .step-toggle{transform:rotate(45deg)}
-.step-body{max-height:0;overflow:hidden;transition:max-height .45s ease}
-.step-body-inner{padding:0 22px 22px;border-top:1px solid var(--border2);padding-top:18px}
-.step-block{margin-bottom:16px}
-.step-block:last-child{margin-bottom:0}
-.step-block h4{
-  font-size:.78rem;color:var(--blue);font-weight:700;
-  text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;
-}
-.step-block p{font-size:.93rem;color:var(--text)}
-.step-block .script{
-  background:rgba(59,113,255,0.08);border-left:3px solid var(--blue);
-  padding:12px 16px;border-radius:8px;font-size:.9rem;color:var(--text);
-}
-.objection{
-  background:rgba(212,168,67,0.08);border-left:3px solid var(--gold);
-  padding:12px 16px;border-radius:8px;margin-bottom:10px;font-size:.88rem;
-}
-.objection strong{color:var(--gold)}
-.kpi-pill{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(212,168,67,0.12);color:var(--gold);
-  padding:6px 14px;border-radius:50px;font-size:.84rem;font-weight:600;
-  border:1px solid rgba(212,168,67,0.25);
-}
-
-/* ══════════════════════════════════════════
-   TREINAMENTO
-══════════════════════════════════════════ */
-#treinamento{padding:100px 0;background:var(--bg-sec2)}
-.timeline{max-width:740px;margin:0 auto;position:relative;padding-left:40px}
-.timeline::before{
-  content:'';position:absolute;left:14px;top:0;bottom:0;width:2px;
-  background:linear-gradient(180deg,var(--blue),var(--gold));
-}
-.tl-item{position:relative;margin-bottom:26px;padding-left:28px}
-.tl-item:last-child{margin-bottom:0}
-.tl-dot{
-  position:absolute;left:-30px;top:4px;width:18px;height:18px;border-radius:50%;
-  background:var(--bg-sec);border:3px solid var(--blue);
-}
-.tl-item:nth-child(odd) .tl-dot{border-color:var(--gold)}
-.tl-time{font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:.05em}
-.tl-title{font-size:1.05rem;font-weight:700;margin:3px 0 3px}
-.tl-desc{font-size:.9rem;color:var(--muted2)}
-
-/* ══════════════════════════════════════════
-   MATERIAIS
-═══════════════════�0;letter-spacing:-.02em;
   margin-bottom:14px;
 }
 .section-head p{color:var(--muted2);font-size:1rem}
@@ -573,7 +489,7 @@ const steps = [
     icon:'📋', phrase:'Antes de vender, domine o produto',
     fazer:'Estudar memorial descritivo, tabela de preços e diferenciais. Definir persona-alvo. Preparar argumentos baseados em dados.',
     como:'Revisar book de vendas toda segunda. Criar ficha-resumo de 1 página por empreendimento com pontos fortes e público-alvo.',
-    script:'Bom dia! Sou [nome], da Construtora. Antes de te apresentar as opções, quero entender melhor seu momento. Vocà busca moradia ou investimento?',
+    script:'Bom dia! Sou [nome], da Construtora. Antes de te apresentar as opções, quero entender melhor seu momento. Você busca moradia ou investimento?',
     kpi:'Número de leads qualificados por semana'
   },
   {
@@ -600,7 +516,7 @@ const steps = [
     script:'',
     objections:[
       {o:'Está caro', r:'Preço é diferente de valor. Esse imóvel tem [diferencial] que reduz custos a longo prazo e garante liquidez.'},
-      {o:'Juros altos', r:'Quando os juros caírem, o preço sobe. Comprando agora, vocà refina depois.'},
+      {o:'Juros altos', r:'Quando os juros caírem, o preço sobe. Comprando agora, você refina depois.'},
       {o:'Preciso pensar', r:'O que exatamente te traz dúvida? Posso te ajudar com informação técnica agora.'}
     ],
     kpi:'Taxa de propostas emitidas / visitas realizadas'
@@ -702,4 +618,68 @@ function openStep(i) {
 
   target.classList.add('highlighted');
   setTimeout(() => target.classList.remove('highlighted'), 3500);
-  setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'c
+  setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'center' }), 80);
+}
+
+/* ── TOGGLE manual dos cards ── */
+function toggleStep(i) {
+  const cards = document.querySelectorAll('.step-card');
+  const card = cards[i];
+  const body = card.querySelector('.step-body');
+  if (card.classList.contains('open')) {
+    card.classList.remove('open');
+    body.style.maxHeight = '0';
+  } else {
+    card.classList.add('open');
+    body.style.maxHeight = body.scrollHeight + 'px';
+  }
+}
+
+/* ── TIMELINE ── */
+const timelineData = [
+  {time:'00:00 — 05:00', title:'Abertura', desc:'Contexto do treinamento, material aberto no celular, alinhamento de expectativas.'},
+  {time:'05:00 — 12:00', title:'Visão Geral', desc:'As 7 frases de efeito do funil apresentadas em sequência.'},
+  {time:'12:00 — 22:00', title:'Etapas 1–3', desc:'Dinâmica Pitch de Elevador com prática entre os participantes.'},
+  {time:'22:00 — 35:00', title:'Etapas 4–5', desc:'Role-play de quebra de objeções e condução ao fechamento.'},
+  {time:'35:00 — 45:00', title:'Etapas 6–7', desc:'Lista de 3 clientes para MGM e plano de pós-venda.'},
+  {time:'45:00 — 55:00', title:'KPIs e Metas', desc:'Planilha de controle, meta de 5 abordagens por corretor.'},
+  {time:'55:00 — 60:00', title:'Encerramento', desc:'Definição do próximo one-on-one e compromissos.'}
+];
+const tlEl = document.getElementById('timeline');
+timelineData.forEach(t => {
+  const item = document.createElement('div');
+  item.className = 'tl-item';
+  item.innerHTML = `<div class="tl-dot"></div><div class="tl-time">${t.time}</div><div class="tl-title">${t.title}</div><div class="tl-desc">${t.desc}</div>`;
+  tlEl.appendChild(item);
+});
+
+/* ── MATERIAIS ── */
+const materiais = [
+  {icon:'📊', title:'Apresentação PowerPoint', desc:'Slides completos do treinamento para apresentar à equipe.'},
+  {icon:'📘', title:'Manual de Treinamento', desc:'Guia estratégico completo com todas as 7 etapas detalhadas.'},
+  {icon:'💻', title:'Material Interativo HTML', desc:'Funil clicável com scripts prontos para uso no celular.'},
+  {icon:'🪪', title:'Cartão Resumo de Bolso', desc:'Infográfico frente e verso para levar a campo.'},
+  {icon:'📈', title:'Planilha de KPIs', desc:'Controle de pipeline com metas e conversão por etapa.'},
+  {icon:'💬', title:'Guia de Scripts e Objeções', desc:'Abordagem, tratativa e respostas prontas para objeções.'},
+  {icon:'🧭', title:'Pauta One-on-One', desc:'Roteiro de 20 minutos para acompanhamento individual.'},
+  {icon:'📅', title:'Calendário de Conteúdo 30 dias', desc:'Planejamento de posts para LinkedIn e Instagram.'}
+];
+const matGrid = document.getElementById('matGrid');
+materiais.forEach(m => {
+  const card = document.createElement('div');
+  card.className = 'mat-card fade-in';
+  card.innerHTML = `<div class="mat-icon">${m.icon}</div><h3>${m.title}</h3><p>${m.desc}</p><span class="mat-badge">✅ Disponível</span>`;
+  matGrid.appendChild(card);
+});
+
+/* ── FADE-IN POR SCROLL ── */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); observer.unobserve(en.target); } });
+}, {threshold: 0.1});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+/* ── ANO ── */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
